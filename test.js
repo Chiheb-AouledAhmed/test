@@ -1,8 +1,4 @@
-console.log('a');
-function adder(x){
-    return function add(y){
-        return x+y;
-    }
-}
-let a = adder(5);
-console.log(a(4));
+const wait = new Promise((resolve,reject)=> {
+    setTimeout(()=> {resolve('Thank you for waiting ');},1000);
+})
+wait.then(()=> console.log('waiting done !! '))
